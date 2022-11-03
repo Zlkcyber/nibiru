@@ -98,9 +98,7 @@ sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 100/g' $HOME/.nibi
 
 
 ## Download addrbook
-```console
-wget -O $HOME/.nibid/config/addrbook.json "soon"
-```
+```wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Nibiru/addrbook.json"```
 
 # Create a service file
 ```bash
