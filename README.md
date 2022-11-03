@@ -127,8 +127,7 @@ sudo systemctl enable nibid
 sudo systemctl restart nibid && sudo journalctl -u nibid -f -o cat
 ```
 # StateSynch 
-```
-bash
+```bash
 peers="968472e8769e0470fadad79febe51637dd208445@65.108.6.45:60656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.nibid/config/config.toml
 
@@ -149,7 +148,7 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.nibid/config/config.toml
 systemctl restart nibid && journalctl -u nibid -f -o cat
 ```
 # After Synch Disable Statesync
-```
+```bash
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.nibid/config/config.toml
 ```
 # Faucet
