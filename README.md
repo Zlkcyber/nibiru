@@ -148,7 +148,10 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.nibid/config/config.toml
 
 systemctl restart nibid && journalctl -u nibid -f -o cat
 ```
-
+# After Synch Disable Statesync
+```
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.nibid/config/config.toml
+```
 ## Create validator
 ```
 nibid tx staking create-validator \
