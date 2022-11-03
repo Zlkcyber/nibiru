@@ -152,6 +152,11 @@ systemctl restart nibid && journalctl -u nibid -f -o cat
 ```
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.nibid/config/config.toml
 ```
+# Faucet
+Get Faucet On Discord
+
+https://discord.gg/dcpPDgJv
+
 ## Create validator
 ```
 nibid tx staking create-validator \
