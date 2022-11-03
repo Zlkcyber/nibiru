@@ -98,7 +98,9 @@ sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 100/g' $HOME/.nibi
 
 
 ## Download addrbook
-```wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Nibiru/addrbook.json"```
+```
+wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Nibiru/addrbook.json"
+```
 
 # Create a service file
 ```bash
@@ -155,13 +157,13 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.nibid/co
 nibid tx staking create-validator \
 --amount=1000000unibi \
 --pubkey=$(nibid tendermint show-validator) \
---moniker=STAVR \
+--moniker=<YourNameValidator> \
 --chain-id=nibiru-testnet-1 \
 --commission-rate="0.10" \
 --commission-max-rate="0.20" \
 --commission-max-change-rate="0.1" \
 --min-self-delegation="1" \
---from=STAVR1 \
+--from=wallet \
 --identity="" \
 --details="" \
 --website="" \
